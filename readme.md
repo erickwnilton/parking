@@ -2,18 +2,18 @@
 
 #### Contrato para construir um sistema para estacionamento, usado para gerenciar veículos estacionados:
 
-## Features
+### Features
 - Adicionar veículos
 - Listar veículos
 - Remover veículos
 - Cobrança de estacionamento (valor)
 
-## Variáveis
+### Variáveis
 - precoInicial - É o preço cobrado para deixar seu veículo estacionado.
 - precoPorHora - É o preço por hora que o veículo permanecer estacionado.
 - veiculos - (List) representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
 
-## Métodos
+### Métodos
 - AdicionarVeiculo - Recebe uma placa digitada pelo cliente e guardar na variável veiculos.
 - RemoverVeiculo - Verifica se um determinado veículo está estacionado, caso verdadeiro, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: 
 ```
