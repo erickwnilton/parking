@@ -14,9 +14,19 @@ namespace parking.Models
 
         public void AdicionarVeiculo()
         {
-            // TODO: Pedir para o usuário digitar uma placa (ReadLine) e adicionar na lista "veiculos"
-            // *IMPLEMENTE AQUI*
             Console.WriteLine("Digite a placa do veículo para estacionar:");
+            string placaDoVeiculo = Console.ReadLine();
+
+            try
+            {
+                veiculos.Add(placaDoVeiculo);
+                Console.WriteLine("Seu veículo foi estacionado com sucesso.");
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine($"Erro ao adicionar veículo no estacionamento {ex.Message}");
+                throw;
+            }
         }
 
         public void RemoverVeiculo()
@@ -51,12 +61,14 @@ namespace parking.Models
 
         public void ListarVeiculos()
         {
-            // Verifica se há veículos no estacionamento
             if (veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
-                // *IMPLEMENTE AQUI*
+    
+                foreach (string veiculos in veiculos)
+                {
+                    Console.WriteLine(veiculos);
+                }
             }
             else
             {
